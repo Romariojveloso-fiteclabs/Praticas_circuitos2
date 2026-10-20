@@ -1,11 +1,15 @@
-LTspice 24.0.9 for Windows
-Circuit: * D:\#Engenharia_eletronica\#UFPE\2024-1_-_Engenharia_Eletronica\EL216 - CIRCUITOS ELETRICOS 2A - 90h\Praticas_circuitos2\03\LTSpice\circuito_ii_pratica_3.asc
-Start Time: Wed Jun 12 07:29:46 2024
+LTspice 24.1.9 for Windows
+Circuit: C:\Users\romariojveloso\Documents\PESSOAL\UFPE\CIRCUITOS2\Praticas_circuitos2\03\LTSpice\circuito_ii_pratica_3.net
+Start Time: Tue Oct  6 10:31:17 2026
 solver = Normal
 Maximum thread count: 12
 tnom = 27
 temp = 27
-method = modified trap
+method = trap
 Direct Newton iteration for .op point succeeded.
-Total elapsed time: 0.050 seconds.
+Total elapsed time: 0.112 seconds.
+
+Files loaded:
+C:\Users\romariojveloso\Documents\PESSOAL\UFPE\CIRCUITOS2\Praticas_circuitos2\03\LTSpice\circuito_ii_pratica_3.net
+C:\Users\romariojveloso\AppData\Local\LTspice\lib\sub\UniversalOpAmp1.lib
 
