@@ -1,0 +1,47 @@
+% Referências bibliográficas
+\begingroup
+\setbeamertemplate{bibliography item}[text]
+\setbeamercolor{bibliography item}{fg=MalvaDestaque}
+\setbeamercolor{bibliography entry author}{fg=RoxoPrincipal}
+\setbeamercolor{bibliography entry title}{fg=CinzaTexto}
+\setbeamercolor{bibliography entry location}{fg=RoxoSecundario}
+\setbeamerfont{bibliography entry author}{series=\bfseries}
+
+% Compacta o espaçamento da lista para acomodar cerca de dez referências.
+\let\bibliografiaOriginal\thebibliography
+\let\fimBibliografiaOriginal\endthebibliography
+\let\itemBibliograficoOriginal\bibitem
+\newif\ifitemBibliograficoAberto
+\itemBibliograficoAbertofalse
+\renewcommand{\thebibliography}[1]{%
+  \bibliografiaOriginal{#1}%
+  \setlength{\itemsep}{0.15ex}%
+  \setlength{\parsep}{0pt}%
+}
+\renewcommand{\bibitem}[1]{%
+  \ifitemBibliograficoAberto
+    \end{minipage}%
+  \fi
+  \itemBibliograficoOriginal{#1}%
+  \begin{minipage}[t]{0.97\linewidth}%
+  \setlength{\parskip}{0pt}%
+  \itemBibliograficoAbertotrue
+}
+\renewcommand{\endthebibliography}{%
+  \ifitemBibliograficoAberto
+    \end{minipage}%
+  \fi
+  \fimBibliografiaOriginal
+}
+
+\begin{frame}[t]{Referências bibliográficas}
+  \vspace{-0.35ex}
+  \fontsize{6.6}{7.3}\selectfont
+  \setlength{\columnsep}{0.45cm}
+  \begin{multicols}{2}
+  \nocite{*}
+  \bibliographystyle{plain}
+  \bibliography{referencias}
+  \end{multicols}
+\end{frame}
+\endgroup

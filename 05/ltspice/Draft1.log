@@ -1,6 +1,6 @@
 LTspice 24.1.9 for Windows
 Circuit: C:\Users\romariojveloso\Documents\PESSOAL\UFPE\CIRCUITOS2\Praticas_circuitos2\05\ltspice\Draft1.net
-Start Time: Tue Oct 20 11:40:38 2026
+Start Time: Tue Oct 27 11:42:03 2026
 solver = Normal
 Maximum thread count: 12
 tnom = 27
@@ -283,7 +283,7 @@ Source Step = 100%
 Source Step = 100%
 Source stepping succeeded in finding the operating point.
 
-Total elapsed time: 12.513 seconds.
+Total elapsed time: 12.121 seconds.
 
 Files loaded:
 C:\Users\romariojveloso\Documents\PESSOAL\UFPE\CIRCUITOS2\Praticas_circuitos2\05\ltspice\Draft1.net
