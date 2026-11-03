@@ -1,0 +1,45 @@
+% Metodologia de validação
+\begin{frame}{Metodologia de validação}
+  \small
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.31\textwidth}
+      \begin{block}{1. Análise teórica}
+        \begin{itemize}
+          \item aplicação da LKC;
+          \item obtenção de $H(s)$;
+          \item substituição $s=j\omega$;
+          \item cálculo de módulo e fase.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{block}{2. Simulação}
+        \begin{itemize}
+          \item circuito reproduzido no LTspice;
+          \item alimentação simétrica de $\pm10\,\mathrm{V}$;
+          \item senoide de $100\,\mathrm{mV}$;
+          \item varredura de $40\,\mathrm{Hz}$ a $11\,\mathrm{kHz}$;
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{block}{3. Ensaio em bancada}
+        \begin{itemize}
+          \item montagem em protoboard;
+          \item amplificador operacional e fonte simétrica;
+          \item gerador e osciloscópio;
+          \item conferência dos componentes;
+          \item dois canais de medição;
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.08cm}
+  \begin{alertblock}{Processamento dos sinais}
+    \centering
+    $|H(j\omega)|=V_o/V_i$
+    \qquad e \qquad
+    $\phi=360^{\circ}\,\Delta T/T$.
+  \end{alertblock}
+\end{frame}

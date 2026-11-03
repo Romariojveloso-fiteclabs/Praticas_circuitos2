@@ -1,0 +1,42 @@
+% Discussão dos resultados
+\begin{frame}{Comparação entre teoria e experimento}
+  \scriptsize
+  \centering
+  \begin{tabular}{rccccc}
+    \toprule
+    & \multicolumn{3}{c}{Magnitude} & \multicolumn{2}{c}{Fase ($^\circ$)} \\
+    \cmidrule(lr){2-4}\cmidrule(lr){5-6}
+    $f$ (Hz) & Teoria & Experimento & Erro & Teoria & Experimento \\
+    \midrule
+    40    & 0,5947  & 0,5674  & 4,59\%  & -90,68  & -91,0 \\
+    100   & 1,5431  & 1,4995  & 2,83\%  & -91,77  & -90,0 \\
+    400   & 18,1956 & 15,3616 & 15,58\% & -111,34 & -108,8 \\
+    480,2 & 49,9733 & 42,4354 & 15,08\% & 178,13  & -153,5 \\
+    1100  & 3,7874  & 4,0000  & 5,61\%  & 94,34   & 96,5 \\
+    11000 & 0,3084  & 0,3486  & 13,03\% & 90,35   & 89,7 \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{0.16cm}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Resultados confirmados}
+        \begin{itemize}
+          \item resposta passa-faixa preservada;
+          \item ressonância experimental em $480{,}2\,\mathrm{Hz}$;
+          \item boa concordância nas extremidades e na fase.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Principais fontes de desvio}
+        \begin{itemize}
+          \item tolerância de resistores e capacitores;
+          \item produto ganho--banda do amplificador;
+          \item parasitas da protoboard e ruído de medição;
+          \item representação circular da fase junto à ressonância.
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}

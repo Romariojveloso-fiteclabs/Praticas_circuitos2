@@ -1,0 +1,56 @@
+% Comparação dos resultados simulados
+\begin{frame}{Validação no LTspice}
+  \renewcommand{\arraystretch}{0.92}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.43\textwidth}
+      \centering
+      \includegraphics[
+        page=10,
+        trim=100bp 330bp 100bp 320bp,
+        clip,
+        width=\linewidth,
+        height=0.46\textheight,
+        keepaspectratio
+      ]{\detokenize{prism-uploads/Romário_Jonas_-_relatório_Pratica_02___Circuitos_Elétricos_2.pdf}}
+
+      \scriptsize Circuito no LTspice.
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \centering
+      \scriptsize
+      \begin{tabular}{rccc}
+        \toprule
+        $f$ (Hz) & Teórico & LTspice & Erro \\
+        \midrule
+        40    & 0,5947 & 0,5952 & 0,09\% \\
+        100   & 1,5431 & 1,5480 & 0,31\% \\
+        400   & 18,1956 & 22,9160 & 25,94\% \\
+        480   & 49,9733 & 48,7146 & 2,52\% \\
+        1100  & 3,7874 & 2,9902 & 21,05\% \\
+        11000 & 0,3084 & 0,2897 & 6,07\% \\
+        \bottomrule
+      \end{tabular}
+
+      \vspace{0.16cm}
+      \textbf{Fase teórica e simulada}
+
+      \vspace{0.06cm}
+      \begin{tabular}{rcc}
+        \toprule
+        $f$ (Hz) & Teórica & LTspice \\
+        \midrule
+        40    & $-90,68^\circ$ & $-89^\circ$ \\
+        480   & $178,13^\circ$ & $179^\circ$ \\
+        11000 & $90,35^\circ$  & $92^\circ$ \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.06cm}
+  \begin{alertblock}{Síntese}
+    \centering
+    A simulação reproduziu a ressonância e as tendências de magnitude e fase;
+    os maiores desvios ocorreram nas regiões de transição.
+  \end{alertblock}
+\end{frame}

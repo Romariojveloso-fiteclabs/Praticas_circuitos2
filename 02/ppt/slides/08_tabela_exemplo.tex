@@ -1,0 +1,43 @@
+% Valores teóricos calculados
+\begin{frame}{Magnitude e fase calculadas}
+  \small
+  \begin{block}{Avaliação de $H(j\omega)$}
+    Os valores abaixo foram obtidos com $R_1=R_2=470\,\Omega$,
+    $R_3=47\,\mathrm{k}\Omega$ e $C=100\,\mathrm{nF}$.
+  \end{block}
+
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \begin{tabular}{rcc}
+        \toprule
+        $f$ (Hz) & $|H(j\omega)|$ & $\phi$ ($^\circ$) \\
+        \midrule
+        40  & 0,5947  & -90,68 \\
+        100 & 1,5431  & -91,77 \\
+        200 & 3,5679  & -94,09 \\
+        400 & 18,1956 & -111,34 \\
+        480 & 49,9733 & 178,13 \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \begin{tabular}{rcc}
+        \toprule
+        $f$ (Hz) & $|H(j\omega)|$ & $\phi$ ($^\circ$) \\
+        \midrule
+        550   & 22,6854 & 116,98 \\
+        1100  & 3,7874  & 94,34 \\
+        2200  & 1,6149  & 91,85 \\
+        5500  & 0,6203  & 90,71 \\
+        11000 & 0,3084  & 90,35 \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.30cm}
+  \centering
+  \alert{O máximo calculado ocorre próximo de $480\,\mathrm{Hz}$, confirmando a seletividade do filtro.}
+\end{frame}

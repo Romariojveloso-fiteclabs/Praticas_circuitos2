@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{ltspice2025}
+{Analog Devices}.
+\newblock Ltspice: Spice simulation software.
+\newblock Disponível em: \url{https://www.analog.com/ltspice}, 2025.
+\newblock Acesso em: maio de 2025.
+
+\bibitem{boylestad2010}
+Robert~L. Boylestad.
+\newblock {\em Introductory Circuit Analysis}.
+\newblock Prentice Hall, Upper Saddle River, 12 edition, 2010.
+
+\bibitem{keysight2023}
+{Keysight Technologies}.
+\newblock {\em InfiniiVision Oscilloscopes: User's Guide}.
+\newblock Keysight Technologies, 2023.
+
+\bibitem{maxima2025}
+{Maxima Development Team}.
+\newblock Maxima: A computer algebra system.
+\newblock Disponível em: \url{https://maxima.sourceforge.io/}, 2025.
+\newblock Acesso em: maio de 2025.
+
+\bibitem{nilsson2015}
+James~W. Nilsson and Susan~A. Riedel.
+\newblock {\em Circuitos Elétricos}.
+\newblock Pearson, São Paulo, 10 edition, 2015.
+
+\end{thebibliography}

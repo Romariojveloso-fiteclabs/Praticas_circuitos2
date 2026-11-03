@@ -1,0 +1,52 @@
+% Resposta teórica em frequência
+\begin{frame}{Resposta teórica em frequência}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.58\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[
+          width=\linewidth,
+          height=0.54\textheight,
+          xmode=log,
+          xmin=35,xmax=13000,
+          ymin=-13,ymax=37,
+          grid=both,
+          major grid style={LavandaLinha},
+          minor grid style={LavandaClaro},
+          xlabel={Frequência (Hz)},
+          ylabel={Magnitude (dB)},
+          tick label style={font=\scriptsize},
+          label style={font=\scriptsize},
+        ]
+          \addplot[very thick,RoxoPrincipal,mark=*,mark size=1.7pt]
+          coordinates {
+            (40,-4.51) (100,3.77) (200,11.05) (400,25.20)
+            (480,33.97) (550,27.11) (1100,11.57) (2200,4.16)
+            (5500,-4.15) (11000,-10.22)
+          };
+          \addplot[dashed,MalvaDestaque] coordinates {(478.9,-13) (478.9,37)};
+        \end{axis}
+      \end{tikzpicture}
+
+      \scriptsize Curva teórica calculada a partir de $H(j\omega)$.
+    \end{column}
+    \begin{column}{0.38\textwidth}
+      \begin{block}{Parâmetros centrais}
+        \small
+        \[
+          f_0=\frac{1}{2\pi}
+          \sqrt{\frac{R_1+R_2}{R_1R_2R_3C^2}}
+          \approx 478{,}9\,\mathrm{Hz}
+        \]
+        \[
+          Q\approx 7{,}07,
+          \qquad |H(j\omega_0)|\approx 50.
+        \]
+      \end{block}
+      \begin{alertblock}{Interpretação}
+        O circuito atenua baixas e altas frequências e apresenta ganho máximo na
+        vizinhança de $480\,\mathrm{Hz}$.
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}
