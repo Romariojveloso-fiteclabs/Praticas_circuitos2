@@ -1,0 +1,174 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{tikz}
+
+% -----------------------------------------------------------------------------
+% Identidade visual
+% -----------------------------------------------------------------------------
+\definecolor{RoxoPrincipal}{HTML}{4D4057}
+\definecolor{RoxoSecundario}{HTML}{75657F}
+\definecolor{MalvaDestaque}{HTML}{9A6F86}
+\definecolor{LavandaClaro}{HTML}{F1EDF3}
+\definecolor{LavandaLinha}{HTML}{D8CFDD}
+\definecolor{CinzaTexto}{HTML}{413C43}
+
+\usetheme{default}
+\useinnertheme{rounded}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamercolor{normal text}{fg=CinzaTexto,bg=white}
+\setbeamercolor{structure}{fg=RoxoPrincipal}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subtitle}{fg=white}
+\setbeamercolor{author}{fg=white}
+\setbeamercolor{institute}{fg=white!90}
+\setbeamercolor{date}{fg=white!80}
+\setbeamercolor{frametitle}{fg=white,bg=RoxoPrincipal}
+\setbeamercolor{block title}{fg=white,bg=RoxoSecundario}
+\setbeamercolor{block body}{fg=CinzaTexto,bg=LavandaClaro}
+\setbeamercolor{block title alerted}{fg=white,bg=MalvaDestaque}
+\setbeamercolor{block body alerted}{fg=CinzaTexto,bg=LavandaClaro}
+\setbeamercolor{alerted text}{fg=MalvaDestaque}
+\setbeamercolor{footline}{fg=RoxoPrincipal,bg=white}
+\setbeamercolor{footline line}{bg=LavandaLinha}
+
+\setbeamerfont{title}{size=\LARGE,series=\bfseries}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamerfont{footline}{size=\scriptsize}
+
+% Logo da UFPE com uma base clara para contraste.
+\newcommand{\marcaInstitucional}[1]{%
+  \begin{tikzpicture}[baseline=(marca.base)]
+    \node[fill=white,rounded corners=2pt,inner sep=2.2pt] (marca) {%
+      \includegraphics[height=#1]{logo_ufpe.png}%
+    };
+  \end{tikzpicture}%
+}
+
+% Cabeçalho roxo com a marca institucional em todos os slides de conteúdo.
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[
+    wd=\paperwidth,ht=3.4ex,dp=1.45ex,leftskip=0.58cm,rightskip=1.75cm
+  ]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle
+  \end{beamercolorbox}%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,fill=white,rounded corners=2pt,inner sep=1.2pt]
+      at ([xshift=-0.32cm,yshift=-0.16cm]current page.north east)
+      {\includegraphics[height=0.52cm]{logo_ufpe.png}};
+  \end{tikzpicture}%
+}
+
+% Rodapé leve, com seção atual e paginação em formato de cápsula.
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \vbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.22ex,dp=0ex]{footline line}
+    \end{beamercolorbox}%
+    \hbox{%
+      \begin{beamercolorbox}[wd=.28\paperwidth,ht=3.0ex,dp=1.15ex,leftskip=0.55cm]{footline}
+        \usebeamerfont{footline}\insertshortauthor
+      \end{beamercolorbox}%
+      \begin{beamercolorbox}[wd=.52\paperwidth,ht=3.0ex,dp=1.15ex,center]{footline}
+        \usebeamerfont{footline}\insertsectionhead
+      \end{beamercolorbox}%
+      \begin{beamercolorbox}[wd=.20\paperwidth,ht=3.0ex,dp=0.65ex,rightskip=0.45cm plus 1fil]{footline}
+        \tikz[baseline=-0.65ex]{%
+          \node[fill=RoxoPrincipal,text=white,rounded corners=5pt,
+            inner xsep=7pt,inner ysep=2.3pt] {%
+            \usebeamerfont{footline}\insertframenumber\,/\,\inserttotalframenumber
+          };
+        }%
+      \end{beamercolorbox}%
+    }%
+  }%
+  \vskip0pt%
+}
+
+% -----------------------------------------------------------------------------
+% Informações editáveis da apresentação
+% -----------------------------------------------------------------------------
+\newcommand{\telefone}{(81) 98538-4702}
+\newcommand{\email}{Romadeoliveira@hotmail.com}
+\newcommand{\linkedin}{linkedin.com/in/romariojonas-veloso-427373175}
+\newcommand{\portfolio}{romariojonas.com}
+\newcommand{\lattes}{lattes.cnpq.br/7040983804231610}
+
+\title[Filtro RC e efeito de carga]{Filtro RC Passa-Baixa e Efeito de Carga}
+\subtitle{Projeto, resposta em frequência e isolamento da carga com buffer}
+\author[Romário J. O. Veloso]{Romário J. O. Veloso}
+\institute{Bacharelando em Engenharia Eletrônica\\
+Universidade Federal de Pernambuco -- UFPE\\
+Centro de Tecnologia e Geociências -- CTG\\
+Departamento de Eletrônica e Sistemas -- DES}
+\date{Prática 4 -- Circuitos Elétricos 2 -- 2026.2}
+
+\pgfplotsset{
+  grafico/.style={
+    width=\linewidth,
+    height=0.49\textheight,
+    grid=both,
+    major grid style={LavandaLinha},
+    minor grid style={LavandaClaro},
+    tick label style={font=\scriptsize},
+    label style={font=\scriptsize},
+    legend style={font=\scriptsize,draw=none,fill=white},
+    scaled ticks=false,
+  }
+}
+
+\begin{document}
+
+\input{slides/01_capa.tex}
+\input{slides/02_sumario.tex}
+
+\section{Introdução}
+\input{slides/03_contexto.tex}
+\input{slides/04_objetivos.tex}
+\input{slides/05_metodologia.tex}
+\input{slides/06_configuracoes.tex}
+
+\section{Análise teórica}
+\input{slides/07_sem_carga.tex}
+\input{slides/08_projeto.tex}
+\input{slides/09_com_carga.tex}
+\input{slides/10_buffer.tex}
+\input{slides/11_bode.tex}
+\input{slides/12_criterio_corte.tex}
+
+\section{Validação}
+\input{slides/13_ltspice_circuitos.tex}
+\input{slides/14_ltspice_bode.tex}
+\input{slides/15_bancada.tex}
+\input{slides/16_medicoes.tex}
+
+\section{Discussão}
+\input{slides/17_recalculo.tex}
+\input{slides/18_comparacao_sem_carga.tex}
+\input{slides/19_comparacao_com_carga.tex}
+\input{slides/20_comparacao_buffer.tex}
+\input{slides/21_discussao.tex}
+
+\section{Conclusão}
+\input{slides/22_conclusoes.tex}
+
+\section{Referências}
+\input{slides/23_referencias.tex}
+
+\input{slides/24_obrigado.tex}
+
+\end{document}

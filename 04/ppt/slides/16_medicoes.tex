@@ -1,0 +1,44 @@
+{
+\pgfplotstableset{
+  columns={f,vi,vo},
+  columns/f/.style={column name={$f$ (Hz)},fixed,fixed zerofill,precision=2},
+  columns/vi/.style={column name={$V_i$ (V)},fixed,fixed zerofill,precision=3},
+  columns/vo/.style={column name={$V_o$ (V)},fixed,fixed zerofill,precision=3},
+  /pgf/number format/use comma,
+  every head row/.style={before row=\toprule,after row=\midrule},
+  every last row/.style={after row=\bottomrule}
+}
+\begin{frame}{Amplitudes medidas nas três configurações}
+  \scriptsize
+  \setlength{\tabcolsep}{3pt}
+  \renewcommand{\arraystretch}{1.0}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.32\textwidth}
+      \centering
+      \textbf{1. Sem carga: $f_c=67\,\mathrm{Hz}$}
+
+      \vspace{0.12cm}
+      \pgfplotstabletypeset{slides/dados/medicoes_1.dat}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \centering
+      \textbf{2. Carga: $f_c=121\,\mathrm{Hz}$}
+
+      \vspace{0.12cm}
+      \pgfplotstabletypeset{slides/dados/medicoes_2.dat}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \centering
+      \textbf{3. Buffer: $f_c=69\,\mathrm{Hz}$}
+
+      \vspace{0.12cm}
+      \pgfplotstabletypeset{slides/dados/medicoes_3.dat}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.16cm}
+  \centering
+  Tensões pico a pico, convertidas para volts. A entrada é medida em cada ponto.
+  Varredura de $0{,}02f_c$ a $20f_c$, conforme o roteiro.
+\end{frame}
+}

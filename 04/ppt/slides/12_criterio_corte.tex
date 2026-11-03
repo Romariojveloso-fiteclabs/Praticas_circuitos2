@@ -1,0 +1,27 @@
+\begin{frame}{Como identificar a frequência de corte}
+  \small
+  \begin{block}{Resposta em regime permanente senoidal}
+    Uma entrada senoidal de amplitude $A$ produz uma saída de amplitude
+    $A|H(j\omega)|$, com defasagem $\arg H(j\omega)$.
+    Para $H(s)=K/(1+s\tau)$, o corte ocorre em $\omega_c=1/\tau$:
+    \[
+      |H(j\omega_c)|=\frac{K}{\sqrt{2}},\qquad \phi(\omega_c)=-45^\circ.
+    \]
+  \end{block}
+
+  {\centering
+    \begin{tabular}{lccc}
+      \toprule
+      Projeto nominal & Ganho DC & Ganho no corte & Corte em dB absolutos \\
+      \midrule
+      Sem carga / buffer & $1$ & $0{,}707$ & $-3{,}01\,\mathrm{dB}$ \\
+      Carga direta & $0{,}4$ & $0{,}283$ & $-10{,}97\,\mathrm{dB}$ \\
+      \bottomrule
+    \end{tabular}\par
+  }
+
+  \begin{alertblock}{Referência da medição}
+    A queda é de $3\,\mathrm{dB}$ em relação ao patamar de cada circuito.
+    Usam-se amplitudes de entrada e saída com a mesma convenção, por exemplo $V_{pp}$.
+  \end{alertblock}
+\end{frame}

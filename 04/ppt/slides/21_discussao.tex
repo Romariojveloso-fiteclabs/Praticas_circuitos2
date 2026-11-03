@@ -1,0 +1,41 @@
+\begin{frame}{Síntese dos resultados e limites da comparação}
+  \small
+  {\centering
+    \setlength{\tabcolsep}{5pt}
+    \renewcommand{\arraystretch}{0.95}
+    \begin{tabular}{lrrrrrr}
+      \toprule
+      & \multicolumn{3}{c}{Frequência de corte (Hz)} & \multicolumn{3}{c}{Ganho de passagem (V/V)} \\
+      \cmidrule(lr){2-4}\cmidrule(lr){5-7}
+      Circuito & Teoria & Medido & Erro & Teoria & Medido & Erro \\
+      \midrule
+      Sem carga & $70{,}20$ & $67$ & $4{,}56\%$ & $1{,}000$ & $0{,}971$ & $2{,}92\%$ \\
+      Carga direta & $109{,}58$ & $121$ & $10{,}42\%$ & $0{,}595$ & $0{,}404$ & $32{,}15\%$ \\
+      Buffer & $68{,}83$ & $69$ & $0{,}25\%$ & $1{,}000$ & $0{,}960$ & $4{,}00\%$ \\
+      \bottomrule
+    \end{tabular}\par
+  }
+
+  \centering\scriptsize Erros relativos à teoria com componentes medidos, calculados antes do arredondamento.
+  \par\small
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Resultados sustentados}
+        \begin{itemize}
+          \item A carga direta reduz o ganho e desloca o corte.
+          \item O buffer aproxima a resposta daquela sem carga.
+          \item A tensão de entrada medida permite comparar toda a varredura.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Limites da interpretação}
+        \begin{itemize}
+          \item O ganho do circuito 2 diverge do modelo em $32{,}15\%$.
+          \item Convém conferir componentes, conexões e referência de entrada.
+          \item Os dados não isolam uma causa para esse desvio.
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}

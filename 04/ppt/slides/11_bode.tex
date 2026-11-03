@@ -1,0 +1,40 @@
+\begin{frame}{Resposta nominal em frequência}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{semilogxaxis}[
+          grafico,width=0.96\linewidth,xmin=0.01,xmax=100000,ymin=-70,ymax=3,
+          xlabel={Frequência (Hz)},ylabel={Magnitude (dB)},legend pos=south west
+        ]
+          \addplot[very thick,RoxoPrincipal] table[x=f,y=ganho1_db]{slides/dados/resposta_nominal.dat};
+          \addlegendentry{Sem carga = buffer ideal}
+          \addplot[very thick,MalvaDestaque,dashed] table[x=f,y=ganho2_db]{slides/dados/resposta_nominal.dat};
+          \addlegendentry{Carga direta}
+        \end{semilogxaxis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{semilogxaxis}[
+          grafico,width=0.96\linewidth,xmin=0.01,xmax=100000,ymin=-95,ymax=5,ytick={-90,-60,-30,0},
+          xlabel={Frequência (Hz)},ylabel={Fase (graus)}
+        ]
+          \addplot[very thick,RoxoPrincipal] table[x=f,y=fase1_deg]{slides/dados/resposta_nominal.dat};
+          \addplot[very thick,MalvaDestaque,dashed] table[x=f,y=fase2_deg]{slides/dados/resposta_nominal.dat};
+        \end{semilogxaxis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+
+  \small
+  \begin{block}{Leitura dos diagramas}
+    Sistemas de primeira ordem: queda assintótica de $20\,\mathrm{dB}$ por década
+    e fase de $0^\circ$ a $-90^\circ$.
+    O buffer ideal recupera a curva do filtro sem carga.
+  \end{block}
+  \centering\scriptsize
+  $R=33\,\mathrm{k}\Omega$, $C=100\,\mathrm{nF}$ e $R_L=22\,\mathrm{k}\Omega$.
+  Magnitude: $20\log_{10}|H(j2\pi f)|$.
+\end{frame}

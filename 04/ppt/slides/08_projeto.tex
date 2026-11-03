@@ -1,0 +1,36 @@
+\begin{frame}{Projeto para frequência de corte de 50 Hz}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Especificação do roteiro}
+        Ganho unitário, $f_c=50\,\mathrm{Hz}$ e $C=100\,\mathrm{nF}$.
+        \[
+          R=\frac{1}{2\pi f_c C}
+          \approx31{,}83\,\mathrm{k}\Omega.
+        \]
+        Escolha comercial:
+        \[
+          \boxed{R=33\,\mathrm{k}\Omega}.
+        \]
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Resposta com o valor comercial}
+        \[
+          \tau=3{,}3\,\mathrm{ms},\qquad K=1.
+        \]
+        \[
+          H_1(s)=\frac{1}{1+0{,}0033s}.
+        \]
+        \[
+          f_c\approx48{,}23\,\mathrm{Hz}.
+        \]
+        O ajuste do resistor desloca o corte em aproximadamente $-3{,}54\%$.
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.10cm}
+  \centering\scriptsize
+  Projeto nominal: $R=33\,\mathrm{k}\Omega$, $C=100\,\mathrm{nF}$ e, quando presente,
+  $R_L=22\,\mathrm{k}\Omega$. A bancada será comparada com seus próprios componentes medidos.
+\end{frame}

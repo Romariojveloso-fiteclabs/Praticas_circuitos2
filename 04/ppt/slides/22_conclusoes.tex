@@ -1,0 +1,19 @@
+\begin{frame}{Conclusões}
+  \begin{itemize}
+    \item O filtro RC é um passa-baixa de primeira ordem, com
+      $H_1(s)=1/(1+sRC)$ e ganho DC unitário.
+    \item Para $50\,\mathrm{Hz}$ e $100\,\mathrm{nF}$, o projeto resulta em
+      $R\approx31{,}83\,\mathrm{k}\Omega$; com $33\,\mathrm{k}\Omega$, o corte é $48{,}23\,\mathrm{Hz}$.
+    \item A carga direta cria um divisor resistivo e altera a constante de tempo para
+      $(R\parallel R_L)C$.
+    \item O buffer ideal restaura $H_3(s)=H_1(s)$ ao isolar a carga do nó capacitivo.
+    \item Na bancada, os cortes registrados foram $67$, $121$ e $69\,\mathrm{Hz}$;
+      com buffer, o ganho de baixa frequência foi $0{,}960$.
+  \end{itemize}
+
+  \begin{alertblock}{Síntese da prática}
+    O comportamento de um filtro depende de sua carga.
+    O seguidor de tensão permite preservar a resposta do estágio RC,
+    respeitadas as limitações do amplificador real.
+  \end{alertblock}
+\end{frame}

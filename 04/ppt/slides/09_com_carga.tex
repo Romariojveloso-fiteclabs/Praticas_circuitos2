@@ -1,0 +1,36 @@
+\begin{frame}{Circuito 2: efeito da carga resistiva}
+  \small
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.47\textwidth}
+      \begin{block}{Equação nodal e função de transferência}
+        \[
+          \frac{V_i-V_o}{R}=sCV_o+\frac{V_o}{R_L}.
+        \]
+        \[
+          H_2(s)=\frac{R_L}{R+R_L+sCRR_L}
+          =\frac{K_2}{1+s\tau_2}.
+        \]
+        \[
+          K_2=\frac{R_L}{R+R_L},\qquad
+          \tau_2=(R\parallel R_L)C.
+        \]
+      \end{block}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \begin{alertblock}{Projeto nominal com carga de $22\,\mathrm{k}\Omega$}
+        \[
+          R\parallel R_L=13{,}2\,\mathrm{k}\Omega.
+        \]
+        \[
+          K_2=0{,}4\quad(-7{,}96\,\mathrm{dB}).
+        \]
+        \[
+          f_{c2}=\frac{1}{2\pi(R\parallel R_L)C}
+          \approx120{,}57\,\mathrm{Hz}.
+        \]
+        O ganho diminui, mas a frequência de corte aumenta:
+        o capacitor passa a enxergar uma resistência equivalente menor.
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}

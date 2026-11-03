@@ -1,0 +1,41 @@
+\begin{frame}{Metodologia de validação}
+  \small
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.31\textwidth}
+      \begin{block}{1. Análise teórica}
+        \begin{itemize}
+          \item impedância $Z_C=1/(sC)$;
+          \item aplicação da lei das correntes;
+          \item resolução simbólica;
+          \item projeto e diagramas de Bode.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{block}{2. Simulação}
+        \begin{itemize}
+          \item três configurações no LTspice;
+          \item fonte AC unitária;
+          \item varredura logarítmica;
+          \item buffer alimentado em $\pm10\,\mathrm{V}$.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{block}{3. Ensaio em bancada}
+        \begin{itemize}
+          \item aferição dos componentes;
+          \item montagem em protoboard;
+          \item medição de $V_i$ e $V_o$;
+          \item cálculo de $|H|=V_o/V_i$.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \begin{alertblock}{Condição de comparação}
+    A tensão de entrada é medida em cada frequência.
+    O corte corresponde a uma queda de $3\,\mathrm{dB}$ em relação ao ganho
+    de baixa frequência de cada configuração.
+  \end{alertblock}
+\end{frame}

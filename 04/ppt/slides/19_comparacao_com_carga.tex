@@ -1,0 +1,39 @@
+\begin{frame}{Comparação em bancada: carga direta}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.61\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{loglogaxis}[
+          grafico,height=0.55\textheight,xmin=0.5,xmax=3000,ymin=0.01,ymax=1.3,
+          xlabel={Frequência (Hz)},ylabel={Magnitude $|H|$ (V/V)},legend pos=south west
+        ]
+          \addplot[very thick,RoxoPrincipal] table[x=f,y=modulo2]{slides/dados/resposta_ajustada.dat};
+          \addlegendentry{Modelo com $R$, $C$, $R_L$ medidos}
+          \addplot[only marks,mark=*,mark size=2pt,MalvaDestaque]
+            table[x=f,y expr={\thisrow{vo}/\thisrow{vi}}]{slides/dados/medicoes_2.dat};
+          \addlegendentry{Bancada}
+        \end{loglogaxis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.35\textwidth}
+      \small
+      \begin{block}{Atenuação de passagem}
+        Medição em $2{,}42\,\mathrm{Hz}$:
+        \[
+          K_{\mathrm{med}}\approx\frac{0{,}460}{1{,}140}
+          \approx0{,}404.
+        \]
+        Teoria: $K_2\approx0{,}595$.
+      \end{block}
+      \begin{alertblock}{Corte relativo ao patamar}
+        $K_{\mathrm{med}}/\sqrt{2}\approx0{,}285$.\\
+        Em $121\,\mathrm{Hz}$:
+        \[
+          |H|=\frac{1{,}470}{5{,}100}\approx0{,}288.
+        \]
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \vspace{0.08cm}
+  \centering\scriptsize Corte teórico: $109{,}58\,\mathrm{Hz}$. A divergência do ganho de passagem requer análise das condições de medição.
+\end{frame}
