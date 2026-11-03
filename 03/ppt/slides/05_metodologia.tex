@@ -1,0 +1,44 @@
+\begin{frame}{Metodologia de validação}
+  \small
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.31\textwidth}
+      \begin{block}{1. Análise teórica}
+        \begin{itemize}
+          \item equações nodais e modelo ideal do ampop;
+          \item resolução simbólica com SymPy;
+          \item Bode entre $0{,}01$ e $10^5\,\mathrm{Hz}$;
+          \item transformada inversa de Laplace.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{block}{2. Simulação}
+        \begin{itemize}
+          \item duas configurações no LTspice;
+          \item alimentação de $\pm10\,\mathrm{V}$;
+          \item análise AC com entrada unitária;
+          \item excitações transitórias de $0{,}8$ e $5\,\mathrm{V}$.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{block}{3. Ensaio em bancada}
+        \begin{itemize}
+          \item conferência dos componentes;
+          \item montagem em protoboard;
+          \item gerador e osciloscópio de dois canais;
+          \item medição de amplitudes, corte e tempos.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \begin{alertblock}{Grandezas de comparação}
+    \centering
+    $|H(j\omega)|=V_o/V_i$
+    \qquad
+    $V_o(f_c)=V_o(0)/\sqrt{2}$
+    \qquad
+    $t_r=t_{90}-t_{10}$.
+  \end{alertblock}
+\end{frame}

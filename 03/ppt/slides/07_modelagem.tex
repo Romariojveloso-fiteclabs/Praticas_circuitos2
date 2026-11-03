@@ -1,0 +1,41 @@
+\begin{frame}{Modelagem no domínio de Laplace}
+  \small
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.44\textwidth}
+      \begin{block}{Equações nodais}
+        \[
+          C_1sV_a+\frac{V_a}{R_3}+\frac{V_a-V_o}{R_2}
+          +\frac{V_a-V_i}{R_1}=0
+        \]
+        \[
+          V_a=-C_2R_3sV_o.
+        \]
+        No modelo ideal, $i^+=i^-=0$.
+        Como $V_o=A(v^+-v^-)$ e $A\to\infty$, a realimentação impõe
+        $v^-\approx v^+=0$: o terminal inversor está em terra virtual.
+      \end{block}
+    \end{column}
+    \begin{column}{0.53\textwidth}
+      \begin{alertblock}{Função de transferência}
+        \[
+          H(s)=\frac{-R_2}{a s^2+b s+R_1}
+        \]
+        \[
+          a=C_1C_2R_1R_2R_3
+        \]
+        \[
+          b=C_2(R_1R_2+R_1R_3+R_2R_3).
+        \]
+        Forma normalizada:
+        \[
+          H(s)=\frac{K\omega_n^2}{s^2+2\zeta\omega_n s+\omega_n^2},
+          \qquad K=-\frac{R_2}{R_1}.
+        \]
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.08cm}
+  \centering
+  \alert{$\omega_n=\sqrt{R_1/a}$ \quad e \quad $\zeta=b/(2\sqrt{aR_1})$.}
+\end{frame}

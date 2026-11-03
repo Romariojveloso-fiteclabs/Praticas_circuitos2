@@ -1,0 +1,38 @@
+\begin{frame}{Níveis de 10\% e 90\% da resposta}
+  \small
+  \setlength{\abovedisplayskip}{4pt}
+  \setlength{\belowdisplayskip}{4pt}
+  A partir do instante do degrau, buscam-se os níveis negativos da saída inversora:
+  \[
+    v_o(t_{10})=0{,}1\,v_o(\infty),
+    \qquad
+    v_o(t_{90})=0{,}9\,v_o(\infty).
+  \]
+
+  \begin{block}{Cálculo a partir da resposta analítica}
+    No circuito 1, resolvem-se numericamente
+    $v_{o1}(t_{10})=-0{,}8\,\mathrm{V}$ e
+    $v_{o1}(t_{90})=-7{,}2\,\mathrm{V}$.
+    No circuito 2, considera-se o primeiro cruzamento de cada nível.
+  \end{block}
+
+  {\centering
+    \renewcommand{\arraystretch}{1.0}
+    \begin{tabular}{lccccc}
+      \toprule
+      & $v_{10}$ (V) & $t_{10}$ (ms) & $v_{90}$ (V) & $t_{90}$ (ms) & $t_r$ (ms) \\
+      \midrule
+      Circuito 1 & $-0{,}8$ & $9{,}35$ & $-7{,}2$ & $124{,}53$ & $115{,}18$ \\
+      Circuito 2 & $-0{,}5$ & $2{,}33$ & $-4{,}5$ & $11{,}05$ & $8{,}71$ \\
+      \bottomrule
+    \end{tabular}
+    \par
+  }
+
+  \begin{alertblock}{Interpretação temporal}
+    Com $t_r=t_{90}-t_{10}$, o circuito 2 completa a transição entre os dois níveis
+    mais rapidamente, com oscilação amortecida.
+  \end{alertblock}
+  \centering\scriptsize
+  Valores teóricos do modelo nominal; arredondamento aplicado ao final dos cálculos.
+\end{frame}

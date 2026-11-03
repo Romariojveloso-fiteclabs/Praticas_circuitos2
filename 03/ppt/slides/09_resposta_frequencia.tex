@@ -1,0 +1,42 @@
+\begin{frame}{Resposta teórica em frequência}
+  \begin{columns}[c,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{semilogxaxis}[
+          grafico,width=0.96\linewidth,xmin=0.01,xmax=100000,ymin=-160,ymax=25,
+          xlabel={Frequência (Hz)},ylabel={Magnitude (dB)},
+          legend pos=south west
+        ]
+          \addplot[very thick,RoxoPrincipal] table[x=f,y=ganho1_db]{slides/dados/resposta_frequencia.dat};
+          \addlegendentry{Circuito 1}
+          \addplot[very thick,MalvaDestaque,dashed] table[x=f,y=ganho2_db]{slides/dados/resposta_frequencia.dat};
+          \addlegendentry{Circuito 2}
+        \end{semilogxaxis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{semilogxaxis}[
+          grafico,xmin=0.01,xmax=100000,ymin=0,ymax=190,
+          ytick={0,45,90,135,180},
+          xlabel={Frequência (Hz)},ylabel={Fase (graus)}
+        ]
+          \addplot[very thick,RoxoPrincipal] table[x=f,y=fase1_deg]{slides/dados/resposta_frequencia.dat};
+          \addplot[very thick,MalvaDestaque,dashed] table[x=f,y=fase2_deg]{slides/dados/resposta_frequencia.dat};
+        \end{semilogxaxis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+
+  \small
+  \begin{block}{Leitura dos diagramas}
+    Ambos os circuitos atenuam altas frequências a $-40\,\mathrm{dB}$ por década.
+    O circuito 2 apresenta um pico suave próximo de $17{,}9\,\mathrm{Hz}$,
+    com $|H|_{\max}\approx1{,}042$.
+  \end{block}
+  \centering\scriptsize
+  Com $s=j2\pi f$: $M(f)=20\log_{10}|H(j2\pi f)|$ e $\phi(f)=\arg H(j2\pi f)$.
+  A fase é apresentada no ramo de $180^\circ$ a $0^\circ$.
+\end{frame}

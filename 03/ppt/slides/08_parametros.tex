@@ -1,0 +1,45 @@
+\begin{frame}{Funções de transferência e polos}
+  \small
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Circuito 1}
+        \[
+          H_1(s)=\frac{-470000}
+          {10{,}3823s^2+2650{,}8s+47000}
+        \]
+        \[
+          p_1\approx-19{,}17\,\mathrm{s}^{-1},\qquad
+          p_2\approx-236{,}15\,\mathrm{s}^{-1}.
+        \]
+        \begin{itemize}
+          \item $K_1=-10$; magnitude em DC: $20\,\mathrm{dB}$.
+          \item $\omega_{n1}\approx67{,}28\,\mathrm{rad/s}$.
+          \item $\zeta_1\approx1{,}897$: sobreamortecido.
+          \item Resposta ao degrau monótona.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Circuito 2}
+        \[
+          H_2(s)=\frac{-470000}
+          {10{,}3823s^2+2650{,}8s+470000}
+        \]
+        \[
+          p_{1,2}\approx-127{,}66\pm j170{,}21\,\mathrm{s}^{-1}.
+        \]
+        \begin{itemize}
+          \item $K_2=-1$; magnitude em DC: $0\,\mathrm{dB}$.
+          \item $\omega_{n2}\approx212{,}77\,\mathrm{rad/s}$.
+          \item $\zeta_2=0{,}6$: subamortecido.
+          \item Oscilação amortecida e sobressinal.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.12cm}
+  \centering\scriptsize
+  Polos obtidos de $\operatorname{den}H(s)=0$.
+  As partes reais negativas garantem estabilidade e o decaimento dos termos transitórios.
+\end{frame}

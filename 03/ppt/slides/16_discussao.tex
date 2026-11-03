@@ -1,0 +1,40 @@
+\begin{frame}{Discussão dos resultados e limites dos registros}
+  \small
+  \centering
+  \renewcommand{\arraystretch}{0.98}
+  \begin{tabular}{lccc}
+    \toprule
+    Grandeza & Teoria & Bancada & Diferença relativa \\
+    \midrule
+    $f_c$ -- circuito 1 & $3{,}03\,\mathrm{Hz}$ & $4{,}3\,\mathrm{Hz}$ & $41{,}9\%$ \\
+    $f_{\max}$ -- circuito 2 & $17{,}92\,\mathrm{Hz}$ & $17{,}5\,\mathrm{Hz}$ & $2{,}3\%$ \\
+    $t_r$ -- circuito 1 & $115{,}18\,\mathrm{ms}$ & -- & -- \\
+    $t_r$ -- circuito 2 & $8{,}71\,\mathrm{ms}$ & -- & -- \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{0.05cm}
+  {\scriptsize $f_c$ referida ao ganho DC; $t_r=t_{90}-t_{10}$ calculado de $H(s)$.
+  Pares experimentais $(t_{10},t_{90})$ não informados.\par}
+
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Interpretação}
+        \begin{itemize}
+          \item O corte do circuito 1 apresenta desvio de $41{,}9\%$.
+          \item O circuito 2 responde mais rapidamente e apresenta sobressinal.
+          \item Tolerâncias e leitura dos cursores podem contribuir para os desvios.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Valores experimentais}
+        \begin{itemize}
+          \item Corte do circuito 1: $4{,}3\,\mathrm{Hz}$, com $V_o=730\,\mathrm{mV}$.
+          \item Pico registrado no circuito 2: $17{,}5\,\mathrm{Hz}$, com $V_o=5{,}0\,\mathrm{V}$.
+          \item A entrada varia na varredura; o ganho é calculado por $V_o/V_i$.
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}

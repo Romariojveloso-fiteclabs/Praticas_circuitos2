@@ -1,0 +1,44 @@
+\begin{frame}{Do degrau à resposta no tempo}
+  \small
+  \setlength{\abovedisplayskip}{4pt}
+  \setlength{\belowdisplayskip}{4pt}
+  Para $v_i(t)=A\,u(t)$ e condições iniciais nulas,
+  $V_i(s)=A/s$ e $V_o(s)=H(s)A/s$.
+
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Circuito 1: $A=0{,}8\,\mathrm{V}$}
+        \[
+          \begin{aligned}
+            v_{o1}(t)\approx{}&-8
+              +8{,}7068\,e^{-19{,}1698t}\\
+              &-0{,}7068\,e^{-236{,}1494t}.
+          \end{aligned}
+        \]
+        Resposta monótona: $v_{o1}(0)=0$ e
+        $v_{o1}(\infty)=-8\,\mathrm{V}$.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Circuito 2: $A=5\,\mathrm{V}$}
+        \[
+          \begin{aligned}
+            v_{o2}(t)\approx{}&-5+5e^{-127{,}6596t}\\
+              &\!\!\times\bigl[\cos(170{,}2128t)\\
+              &\quad+0{,}75\sin(170{,}2128t)\bigr].
+          \end{aligned}
+        \]
+        Oscilação amortecida e sobressinal antes da convergência para $-5\,\mathrm{V}$.
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \begin{alertblock}{Valor final e estabilidade}
+    Como os polos de $sV_o(s)$ têm parte real negativa,
+    \[
+      \lim_{t\to\infty}v_o(t)=\lim_{s\to0}sV_o(s)
+      =A\,H(0)=-A\frac{R_2}{R_1}.
+    \]
+  \end{alertblock}
+  \centering\scriptsize Inversa de Laplace para $t\geq0$, com $t$ em segundos e $v_o$ em volts.
+\end{frame}

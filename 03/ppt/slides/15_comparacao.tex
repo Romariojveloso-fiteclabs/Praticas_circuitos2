@@ -1,0 +1,49 @@
+\begin{frame}{Comparação entre teoria e experimento}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \textbf{Circuito 1}
+
+      \begin{tikzpicture}
+        \begin{semilogxaxis}[
+          grafico,xmin=0.3,xmax=50,ymin=0,ymax=10.5,
+          xlabel={Frequência (Hz)},ylabel={Magnitude $|H|$ (V/V)},
+          legend pos=north east
+        ]
+          \addplot[very thick,RoxoPrincipal] table[x=f,y expr={10^(\thisrow{ganho1_db}/20)}]{slides/dados/resposta_frequencia.dat};
+          \addlegendentry{Modelo nominal}
+          \addplot[only marks,mark=*,mark size=2pt,MalvaDestaque]
+            table[x=f1,y expr={\thisrow{vo1_v}/\thisrow{vi1_v}}]{slides/dados/medicoes_frequencia.dat};
+          \addlegendentry{Bancada}
+        \end{semilogxaxis}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \textbf{Circuito 2}
+
+      \begin{tikzpicture}
+        \begin{semilogxaxis}[
+          grafico,xmin=1,xmax=200,ymin=0,ymax=1.15,
+          xlabel={Frequência (Hz)},ylabel={Magnitude $|H|$ (V/V)},
+          legend pos=south west
+        ]
+          \addplot[very thick,RoxoPrincipal] table[x=f,y expr={10^(\thisrow{ganho2_db}/20)}]{slides/dados/resposta_frequencia.dat};
+          \addlegendentry{Modelo nominal}
+          \addplot[only marks,mark=*,mark size=2pt,MalvaDestaque]
+            table[x=f2,y expr={\thisrow{vo2_v}/\thisrow{vi2_v}}]{slides/dados/medicoes_frequencia.dat};
+          \addlegendentry{Bancada}
+        \end{semilogxaxis}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+
+  \small
+  \begin{block}{Comportamentos observados}
+    A atenuação do circuito 1 é gradual. No circuito 2, o ganho permanece próximo
+    da unidade e a frequência de pico registrada é $17{,}5\,\mathrm{Hz}$.
+  \end{block}
+  \centering\scriptsize
+  Curvas com componentes nominais; pontos calculados por $|H|=V_o/V_i$
+  com as tensões de entrada e saída medidas em cada frequência.
+\end{frame}

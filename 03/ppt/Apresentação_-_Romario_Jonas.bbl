@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+
+\bibitem{ltspice2024}
+{Analog Devices}.
+\newblock Ltspice.
+\newblock Software de simulação de circuitos eletrônicos, 2024.
+\newblock Ferramenta utilizada no relatório de referência.
+
+\bibitem{boylestad2010}
+Robert~L. Boylestad.
+\newblock {\em Introductory Circuit Analysis}.
+\newblock Prentice Hall, Upper Saddle River, NJ, 12 edition, 2010.
+
+\bibitem{cabral2022}
+Hermano Cabral.
+\newblock {\em Circuitos 2}.
+\newblock Universidade Federal de Pernambuco, Departamento de Eletrônica e Sistemas, 2022.
+\newblock Material de 10 de março de 2022: circuito, modelo de amplificador operacional e resposta ao degrau.
+
+\bibitem{luiz2024}
+Saulo O.~D. Luiz.
+\newblock {\em 3ª Prática de Laboratório}.
+\newblock Universidade Federal de Pernambuco, Departamento de Eletrônica e Sistemas, 2024.
+\newblock EL216 -- Circuitos 2. Roteiro de 25 de maio de 2024.
+
+\bibitem{sympy2023}
+{SymPy Development Team}.
+\newblock Sympy: Python library for symbolic mathematics.
+\newblock Biblioteca de computação simbólica, 2023.
+\newblock Ferramenta utilizada no relatório de referência.
+
+\end{thebibliography}

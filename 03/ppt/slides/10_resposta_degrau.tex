@@ -1,0 +1,50 @@
+\begin{frame}{Resposta teórica ao degrau}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \centering
+      \textbf{Circuito 1: degrau de $0{,}8\,\mathrm{V}$}
+
+      \begin{tikzpicture}
+        \begin{axis}[
+          grafico,height=0.43\textheight,
+          xmin=0,xmax=500,ymin=-8.6,ymax=0.4,
+          xlabel={Tempo (ms)},ylabel={$v_o(t)$ (V)}
+        ]
+          \addplot[very thick,RoxoPrincipal] table[x=t1_ms,y=saida1_v]{slides/dados/resposta_degrau.dat};
+          \addplot[dashed,MalvaDestaque] coordinates {(0,-8) (500,-8)};
+          \addplot[only marks,mark=*,MalvaDestaque] coordinates {(9.35,-0.8) (124.53,-7.2)};
+        \end{axis}
+      \end{tikzpicture}
+
+      \small
+      $v_o(\infty)=-8\,\mathrm{V}$\\
+      $t_{10}\approx9{,}35\,\mathrm{ms}$; $t_{90}\approx124{,}53\,\mathrm{ms}$.
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \textbf{Circuito 2: degrau de $5\,\mathrm{V}$}
+
+      \begin{tikzpicture}
+        \begin{axis}[
+          grafico,height=0.43\textheight,
+          xmin=0,xmax=60,ymin=-5.8,ymax=0.3,
+          xlabel={Tempo (ms)},ylabel={$v_o(t)$ (V)}
+        ]
+          \addplot[very thick,MalvaDestaque] table[x=t2_ms,y=saida2_v]{slides/dados/resposta_degrau.dat};
+          \addplot[dashed,RoxoSecundario] coordinates {(0,-5) (60,-5)};
+          \addplot[only marks,mark=*,RoxoPrincipal] coordinates {(2.33,-0.5) (11.05,-4.5)};
+        \end{axis}
+      \end{tikzpicture}
+
+      \small
+      $v_o(\infty)=-5\,\mathrm{V}$\\
+      $t_{10}\approx2{,}33\,\mathrm{ms}$; $t_{90}\approx11{,}05\,\mathrm{ms}$.
+    \end{column}
+  \end{columns}
+
+  \vspace{0.12cm}
+  \centering\scriptsize
+  Circuito 1: intervalo de $0$ a $0{,}5\,\mathrm{s}$.
+  Circuito 2: detalhe dos primeiros $60\,\mathrm{ms}$.
+  Os pontos indicam os níveis de 10\% e 90\% do valor final.
+\end{frame}
