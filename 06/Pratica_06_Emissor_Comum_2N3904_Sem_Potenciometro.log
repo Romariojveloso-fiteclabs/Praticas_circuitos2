@@ -1,0 +1,18 @@
+LTspice 26.0.1 for Windows
+Circuit: Z:\mnt\Roma_HD\FACULDADE\2026-2\CIRCUITOS 2\PRATICAS\Praticas_circuitos2\06\Pratica_06_Emissor_Comum_2N3904_Sem_Potenciometro.net
+Start Time: Mon Nov 16 12:51:00 2026
+solver = Normal
+Maximum thread count: 12
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.161 seconds.
+
+Files loaded:
+Z:\mnt\Roma_HD\FACULDADE\2026-2\CIRCUITOS 2\PRATICAS\Praticas_circuitos2\06\Pratica_06_Emissor_Comum_2N3904_Sem_Potenciometro.net
+C:\users\roma\AppData\Local\LTspice\lib\cmp\standard.bjt
+
+v1pp: PP(V(V1) )=0.0296877948567 FROM 0.001 TO 0.004
+v2pp: PP(V(V2) )=1.23778742552 FROM 0.001 TO 0.004
+avpp: V2pp/V1pp=41.6934781277

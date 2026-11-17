@@ -1,0 +1,25 @@
+APRESENTAÇÃO — 6ª PRÁTICA DE CIRCUITOS 2 (UFPE)
+Autor: Romário Jonas O. Veloso
+Data: 16/11/2026
+
+ESTRUTURA:
+  Apresentacao_Pratica06_Romario_Veloso.tex   (arquivo único; todos os slides)
+  referencias.bib                             (bibliografia BibTeX)
+  imgs/                                       (todas as imagens, inclusive logo)
+
+COMPILAÇÃO (na pasta dos arquivos):
+  pdflatex Apresentacao_Pratica06_Romario_Veloso.tex
+  bibtex Apresentacao_Pratica06_Romario_Veloso
+  pdflatex Apresentacao_Pratica06_Romario_Veloso.tex
+  pdflatex Apresentacao_Pratica06_Romario_Veloso.tex
+
+ALTERNATIVA (se tiver latexmk):
+  latexmk -pdf Apresentacao_Pratica06_Romario_Veloso.tex
+
+VS CODE / LaTeX WORKSHOP:
+  Abra o arquivo .tex e compile a receita pdflatex -> bibtex -> pdflatex (x2).
+  A raiz de compilação é o próprio arquivo principal.
+
+Não há arquivos .tex auxiliares necessários. Os nomes das imagens
+utilizadas em \includegraphics usam caminhos relativos da pasta imgs/.
+Os espaços de fotos e resultados experimentais permanecem sem preenchimento.

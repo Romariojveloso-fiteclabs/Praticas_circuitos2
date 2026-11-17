@@ -1,7 +1,5 @@
 # Cola de apresentação — Prática 3
 
-Acompanhe a numeração do [PDF da apresentação](Apresentação_-_Romario_Jonas.pdf). Use as falas como lembretes; destaque o comportamento dos circuitos sem ler todas as tabelas.
-
 ## Slide 1 — Filtro Ativo Passa-Baixa de Segunda Ordem
 
 “Vou apresentar a análise de dois filtros ativos de segunda ordem, comparando a resposta em frequência e a resposta ao degrau.”
@@ -83,10 +81,10 @@ $$
 
 “Como o valor final é negativo, os níveis de 10% e 90% também são negativos. Resolvo a expressão temporal para encontrar o primeiro instante de cada cruzamento.”
 
-| Circuito | Níveis de 10% / 90% | $t_{10}$ | $t_{90}$ | $t_r$ |
-| --- | --- | --- | --- | --- |
-| 1 | −0,8 / −7,2 V | 9,35 ms | 124,53 ms | 115,18 ms |
-| 2 | −0,5 / −4,5 V | 2,33 ms | 11,05 ms | 8,71 ms |
+| Circuito | Níveis de 10% / 90% | $t_{10}$ | $t_{90}$  | $t_r$     |
+| -------- | ------------------- | -------- | --------- | --------- |
+| 1        | −0,8 / −7,2 V       | 9,35 ms  | 124,53 ms | 115,18 ms |
+| 2        | −0,5 / −4,5 V       | 2,33 ms  | 11,05 ms  | 8,71 ms   |
 
 “O circuito 2 faz essa transição mais rapidamente.” **São valores teóricos**, com arredondamento ao final dos cálculos.
 
@@ -146,12 +144,12 @@ $$
 
 ## Consulta rápida — Perguntas do roteiro
 
-| Pergunta | Onde responder |
-| --- | --- |
-| 1. Função de transferência numérica | Slide 8 |
-| 2. Polos da função de transferência | Slide 8 |
-| 3. Bode de magnitude e fase | Slide 9 |
-| 4. Resposta ao degrau de 0,8 V | Slide 10 |
-| 5. Valor de convergência | Slide 10: **−8 V** |
-| 6. Gráfico entre 0 e 0,5 s | Slide 11, à esquerda |
-| 7. Tempos de 10% e 90% | Slide 12: **9,35 ms e 124,53 ms** |
+| Pergunta                            | Onde responder                    |
+| ----------------------------------- | --------------------------------- |
+| 1. Função de transferência numérica | Slide 8                           |
+| 2. Polos da função de transferência | Slide 8                           |
+| 3. Bode de magnitude e fase         | Slide 9                           |
+| 4. Resposta ao degrau de 0,8 V      | Slide 10                          |
+| 5. Valor de convergência            | Slide 10: **−8 V**                |
+| 6. Gráfico entre 0 e 0,5 s          | Slide 11, à esquerda              |
+| 7. Tempos de 10% e 90%              | Slide 12: **9,35 ms e 124,53 ms** |

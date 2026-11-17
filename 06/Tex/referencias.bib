@@ -1,0 +1,124 @@
+% Referencias bibliograficas - 6a Pratica de Laboratorio / Circuitos 2 (UFPE)
+% Elaborado para: Romario Jonas O. Veloso
+% Data de organizacao: 16/11/2026
+% Arquivo BibTeX, compativel com BibTeX e biblatex-ABNT.
+%
+% FONTES FORNECIDAS NA DISCIPLINA
+
+@misc{cabral2022pratica6,
+  author       = {Cabral, Hermano},
+  title        = {{6a Prática de Laboratório}},
+  year         = {2022},
+  month        = apr,
+  howpublished = {Roteiro de prática de laboratório, disciplina EL216 -- Circuitos 2},
+  organization = {Universidade Federal de Pernambuco, Departamento de Eletrônica e Sistemas},
+  address      = {Recife},
+  note         = {Documento datado de 19 abr. 2022, fornecido na disciplina. Aborda os parâmetros g de amplificador TBJ em emissor comum. Arquivo original: 6a\_pratica.pdf}
+}
+
+@misc{cabral2022roteiro,
+  author       = {Cabral, Hermano},
+  title        = {{Circuitos 2}: amplificador emissor comum},
+  year         = {2022},
+  month        = apr,
+  howpublished = {Material de aula (23 slides), disciplina Circuitos 2},
+  organization = {Universidade Federal de Pernambuco, Departamento de Eletrônica e Sistemas},
+  address      = {Recife},
+  note         = {Apresentação datada de 19 abr. 2022, fornecida na disciplina. Arquivo original: roteiro(2).pdf}
+}
+
+% REFERENCIAS TEORICAS: TRANSISTORES, POLARIZACAO E PEQUENOS SINAIS
+
+@book{sedra2020microelectronic,
+  author    = {Sedra, Adel S. and Smith, Kenneth C. and Carusone, Tony Chan and Gaudet, Vincent},
+  title     = {Microelectronic Circuits},
+  edition   = {8},
+  publisher = {Oxford University Press},
+  address   = {New York},
+  year      = {2020},
+  isbn      = {9780190853549},
+  url       = {https://learninglink.oup.com/access/sedra8e/sedra8e},
+  note      = {Referência para polarização e análise de amplificadores com transistores bipolares}
+}
+
+@book{razavi2021microelectronics,
+  author    = {Razavi, Behzad},
+  title     = {Fundamentals of Microelectronics},
+  edition   = {3},
+  publisher = {John Wiley \& Sons},
+  year      = {2021},
+  isbn      = {9781119695141},
+  url       = {https://www.wiley.com/en-br/fundamentals-of-microelectronics-3rd-edition-p-9781119695141},
+  note      = {Referência para modelo híbrido-pi, transcondutância e amplificador emissor comum}
+}
+
+@book{boylestad2014devices,
+  author    = {Boylestad, Robert L. and Nashelsky, Louis},
+  title     = {Electronic Devices and Circuit Theory},
+  edition   = {11},
+  publisher = {Pearson},
+  year      = {2014},
+  isbn      = {9781292038063},
+  url       = {https://www.pearson.com/en-gb/subject-catalog/p/Boylestad-Electronic-Devices-and-Circuit-Theory-Pearson-New-International-Edition-11th-Edition/P200000003794?view=educator},
+  note      = {Edição internacional, publicada em 2013, com copyright de 2014}
+}
+
+% REFERENCIA TEORICA: METODOS NODAIS E QUADRIPOLOS
+
+@book{alexander2021circuits,
+  author    = {Alexander, Charles K. and Sadiku, Matthew N. O.},
+  title     = {Fundamentals of Electric Circuits},
+  edition   = {7},
+  publisher = {McGraw-Hill Education},
+  year      = {2021},
+  isbn      = {9781260226409},
+  url       = {https://www.mathworks.com/academia/books/fundamentals-of-electric-circuits-alexander.html},
+  note      = {Inclui análise de redes de duas portas e técnicas de análise de circuitos}
+}
+
+% DOCUMENTACAO TECNICA DO TRANSISTOR E DA SIMULACAO
+
+@manual{onsemi2024twoN3904,
+  author       = {{onsemi}},
+  title        = {{2N3904}: NPN General-Purpose Amplifier},
+  organization = {onsemi},
+  year         = {2024},
+  month        = oct,
+  note         = {Datasheet 2N3904/D, revisão 3. Dados para componente da onsemi; não comprova a pinagem do transistor comercializado sob outra marca},
+  url          = {https://www.onsemi.com/download/data-sheet/pdf/2n3904-d.pdf},
+  urldate      = {2026-11-16}
+}
+
+@misc{analogdevices2026ltspice,
+  author       = {{Analog Devices}},
+  title        = {{LTspice}: The High Performance SPICE Simulator},
+  organization = {Analog Devices},
+  year         = {2026},
+  howpublished = {Página oficial do software de simulação},
+  url          = {https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html},
+  urldate      = {2026-11-16}
+}
+
+@misc{spencer2016ltspice,
+  author       = {Spencer, Joseph and Alonso, Gabino},
+  title        = {{LTspice}: Plotting a Parameter Against Something Other Than Time (e.g., Resistance)},
+  organization = {Analog Devices},
+  year         = {2016},
+  month        = mar,
+  day          = {25},
+  url          = {https://www.analog.com/en/resources/technical-articles/ltspice-plotting-a-parameter-against-something-other-than-time-e-g-resistance.html},
+  urldate      = {2026-11-16},
+  note         = {Aplicação de diretivas .measure e .step para gráficos em função da resistência}
+}
+
+% DOCUMENTACAO COMPUTACIONAL PARA OS MINIMOS QUADRADOS
+
+@manual{numpy2026lstsq,
+  author       = {{NumPy Developers}},
+  title        = {{numpy.linalg.lstsq}: Least-Squares Solution to a Linear Matrix Equation},
+  organization = {NumPy},
+  year         = {2026},
+  url          = {https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html},
+  urldate      = {2026-11-16},
+  note         = {Documentação oficial da função utilizada no Método dos Mínimos Erros Quadráticos (MMEQ)}
+}

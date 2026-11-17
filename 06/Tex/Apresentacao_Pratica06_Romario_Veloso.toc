@@ -1,0 +1,11 @@
+\babel@toc {brazilian}{}\relax 
+\beamer@sectionintoc {1}{Introdução}{3}{0}{1}
+\beamer@sectionintoc {2}{Objetivos}{5}{0}{2}
+\beamer@sectionintoc {3}{Metodologia}{6}{0}{3}
+\beamer@sectionintoc {4}{Análise teórica: grandes sinais}{8}{0}{4}
+\beamer@sectionintoc {5}{Análise teórica: pequenos sinais}{11}{0}{5}
+\beamer@sectionintoc {6}{Quadripolo e parâmetros g}{13}{0}{6}
+\beamer@sectionintoc {7}{Previsões teóricas}{16}{0}{7}
+\beamer@sectionintoc {8}{Simulação e laboratório}{20}{0}{8}
+\beamer@sectionintoc {9}{Conclusões}{29}{0}{9}
+\beamer@sectionintoc {10}{Referências}{30}{0}{10}

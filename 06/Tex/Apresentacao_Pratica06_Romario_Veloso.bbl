@@ -1,0 +1,61 @@
+\begin{thebibliography}{10}
+
+\bibitem{alexander2021circuits}
+Charles~K. Alexander and Matthew N.~O. Sadiku.
+\newblock {\em Fundamentals of Electric Circuits}.
+\newblock McGraw-Hill Education, 7 edition, 2021.
+\newblock Inclui análise de redes de duas portas e técnicas de análise de circuitos.
+
+\bibitem{analogdevices2026ltspice}
+{Analog Devices}.
+\newblock {LTspice}: The high performance spice simulator.
+\newblock Página oficial do software de simulação, 2026.
+
+\bibitem{boylestad2014devices}
+Robert~L. Boylestad and Louis Nashelsky.
+\newblock {\em Electronic Devices and Circuit Theory}.
+\newblock Pearson, 11 edition, 2014.
+\newblock Edição internacional, publicada em 2013, com copyright de 2014.
+
+\bibitem{cabral2022pratica6}
+Hermano Cabral.
+\newblock {6a Prática de Laboratório}.
+\newblock Roteiro de prática de laboratório, disciplina EL216 -- Circuitos 2, April 2022.
+\newblock Documento datado de 19 abr. 2022, fornecido na disciplina. Aborda os parâmetros g de amplificador TBJ em emissor comum. Arquivo original: 6a\_pratica.pdf.
+
+\bibitem{cabral2022roteiro}
+Hermano Cabral.
+\newblock {Circuitos 2}: amplificador emissor comum.
+\newblock Material de aula (23 slides), disciplina Circuitos 2, April 2022.
+\newblock Apresentação datada de 19 abr. 2022, fornecida na disciplina. Arquivo original: roteiro(2).pdf.
+
+\bibitem{numpy2026lstsq}
+{NumPy Developers}.
+\newblock {\em {numpy.linalg.lstsq}: Least-Squares Solution to a Linear Matrix Equation}.
+\newblock NumPy, 2026.
+\newblock Documentação oficial da função utilizada no Método dos Mínimos Erros Quadráticos (MMEQ).
+
+\bibitem{onsemi2024twoN3904}
+{onsemi}.
+\newblock {\em {2N3904}: NPN General-Purpose Amplifier}.
+\newblock onsemi, October 2024.
+\newblock Datasheet 2N3904/D, revisão 3. Dados para componente da onsemi; não comprova a pinagem do transistor comercializado sob outra marca.
+
+\bibitem{razavi2021microelectronics}
+Behzad Razavi.
+\newblock {\em Fundamentals of Microelectronics}.
+\newblock John Wiley \& Sons, 3 edition, 2021.
+\newblock Referência para modelo híbrido-pi, transcondutância e amplificador emissor comum.
+
+\bibitem{sedra2020microelectronic}
+Adel~S. Sedra, Kenneth~C. Smith, Tony~Chan Carusone, and Vincent Gaudet.
+\newblock {\em Microelectronic Circuits}.
+\newblock Oxford University Press, New York, 8 edition, 2020.
+\newblock Referência para polarização e análise de amplificadores com transistores bipolares.
+
+\bibitem{spencer2016ltspice}
+Joseph Spencer and Gabino Alonso.
+\newblock {LTspice}: Plotting a parameter against something other than time (e.g., resistance), March 2016.
+\newblock Aplicação de diretivas .measure e .step para gráficos em função da resistência.
+
+\end{thebibliography}

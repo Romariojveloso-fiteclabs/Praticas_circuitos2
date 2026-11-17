@@ -1,7 +1,5 @@
 # Cola de apresentação — Prática 4
 
-Acompanhe a numeração do [PDF da apresentação](Apresentação_-_Romario_Jonas.pdf). Destaque as mudanças de ganho e de frequência de corte; use as tabelas como apoio.
-
 ## Slide 1 — Filtro RC Passa-Baixa e Efeito de Carga
 
 “Vou apresentar um filtro RC passa-baixa em três condições: sem carga, com carga direta e com uma carga isolada por buffer.”
@@ -114,11 +112,11 @@ $$
 
 “Substituindo os componentes aferidos nas expressões gerais, obtenho as previsões ajustadas à bancada.”
 
-| Circuito | Ganho DC teórico | Corte teórico |
-| --- | --- | --- |
-| Sem carga | 1 | 70,20 Hz |
-| Carga direta | 0,59472 | 109,58 Hz |
-| Buffer | 1 | 68,83 Hz |
+| Circuito     | Ganho DC teórico | Corte teórico |
+| ------------ | ---------------- | ------------- |
+| Sem carga    | 1                | 70,20 Hz      |
+| Carga direta | 0,59472          | 109,58 Hz     |
+| Buffer       | 1                | 68,83 Hz      |
 
 “As constantes de tempo são, respectivamente, **2,2671**, **1,4524** e **2,3123 ms**. A diferença entre os cortes dos circuitos 1 e 3 acompanha seus componentes medidos.”
 
@@ -166,15 +164,15 @@ $$
 
 ## Consulta rápida — Atividades do roteiro
 
-| Atividade | Slides |
-| --- | --- |
-| Equações, função de transferência, ganho e corte sem carga | 7 |
-| Projeto de 50 Hz com capacitor de 100 nF e resistor comercial | 8 |
-| Equações, função de transferência e efeito da carga | 9 |
-| Modelo do ampop, função de transferência e restauração pelo buffer | 10 |
-| Diagramas de Bode e comparação das configurações | 11–12 |
-| Representação e análise AC no LTspice | 13–14 |
-| Valores reais dos componentes | 15 |
-| Tabelas de tensões e varredura em frequência | 16 |
-| Recálculo das funções com os componentes medidos | 17 |
-| Sobreposição em escala log-log e comparação dos ganhos e cortes | 18–21 |
+| Atividade                                                          | Slides |
+| ------------------------------------------------------------------ | ------ |
+| Equações, função de transferência, ganho e corte sem carga         | 7      |
+| Projeto de 50 Hz com capacitor de 100 nF e resistor comercial      | 8      |
+| Equações, função de transferência e efeito da carga                | 9      |
+| Modelo do ampop, função de transferência e restauração pelo buffer | 10     |
+| Diagramas de Bode e comparação das configurações                   | 11–12  |
+| Representação e análise AC no LTspice                              | 13–14  |
+| Valores reais dos componentes                                      | 15     |
+| Tabelas de tensões e varredura em frequência                       | 16     |
+| Recálculo das funções com os componentes medidos                   | 17     |
+| Sobreposição em escala log-log e comparação dos ganhos e cortes    | 18–21  |
